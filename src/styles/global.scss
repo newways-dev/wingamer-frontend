@@ -1,0 +1,62 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--white);
+  font-family: var(--rubik);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --rubik: 'Rubik', sans-serif;
+  --rubik-glitch: 'Rubik Glitch', sans-serif;
+  --rubic-mono-one: 'Rubik Mono One', sans-serif;
+
+  --background: #191919;
+
+  --white: #fff;
+
+  --blue: #2d9cdb;
+  --orange: #f2994a;
+  --green: #27ae60;
+  --purple: #9b51e0;
+
+  --blue-gradient: linear-gradient(
+    180deg,
+    #41b2f2 0%,
+    #2d9cdb 11.98%,
+    #2d9cdb 86.98%,
+    #1478b0 100%
+  );
+  --orange-gradient: linear-gradient(
+    180deg,
+    #ffb676 0%,
+    #f2994a 8.85%,
+    #f2994a 88.54%,
+    #dd7f2c 100%
+  );
+  --green-gradient: linear-gradient(
+    180deg,
+    #3ac474 0%,
+    #27ae60 7.81%,
+    #27ae60 91.15%,
+    #179e50 100%
+  );
+  --purple-gradient: linear-gradient(
+    180deg,
+    #b46ef4 0%,
+    #9b51e0 10.94%,
+    #7926c7 100%
+  );
+}

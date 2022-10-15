@@ -1,0 +1,72 @@
+.card {
+  background: linear-gradient(179.37deg, #282828 -8.29%, #111111 87.58%),
+    linear-gradient(179.37deg, #282828 -8.29%, #111111 87.58%);
+  border-radius: 3px;
+  z-index: 101;
+  width: 100%;
+
+  .imageContainer {
+    width: 100%;
+
+    .image {
+      width: 100%;
+    }
+  }
+
+  .wrapper {
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .top {
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .blockPuzzle {
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+        color: var(--purple);
+        text-shadow: 0px 0px 15px rgba(155, 81, 224, 0.5);
+      }
+      .ends {
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+        color: #fff;
+        opacity: 0.6;
+      }
+    }
+
+    .title {
+      margin-top: 15px;
+    }
+
+    .bottom {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .price {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      .button {
+        width: 84px;
+        height: 41px;
+        font-weight: 600;
+        // border-color: var(--purple);
+        // color: var(--purple);
+      }
+    }
+  }
+}
