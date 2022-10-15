@@ -1,0 +1,73 @@
+.pvp {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  z-index: 50;
+
+  &:nth-child(2) {
+    a {
+      display: none;
+    }
+  }
+
+  div {
+    div {
+      div {
+        max-width: 315px;
+      }
+    }
+  }
+
+  .seeMore {
+    color: var(--purple);
+  }
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.seeMore {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.coin,
+.fun {
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
+
+  a {
+    color: var(--orange);
+  }
+
+  div {
+    div {
+      div {
+        max-width: 248px;
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -320px;
+    z-index: -1;
+    background: url('../../assets/images/shape2.png') no-repeat;
+    background-size: 100%;
+  }
+}
+
+.fun {
+  margin-bottom: 100px;
+  a {
+    color: var(--green);
+  }
+}
