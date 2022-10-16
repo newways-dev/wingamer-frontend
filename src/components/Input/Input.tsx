@@ -1,5 +1,13 @@
-import styles from './Input.module.scss'
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
 
-export const Input = () => {
-  return <input />
+export interface InputProps
+  extends DetailedHTMLProps<
+    HTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
+  placeholder: string
+}
+
+export const Input = ({ placeholder, className, ...props }: InputProps) => {
+  return <input placeholder={placeholder} className={className} {...props} />
 }

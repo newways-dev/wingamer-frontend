@@ -5,8 +5,60 @@
   z-index: 101;
   width: 100%;
 
+  max-width: 248px;
+
   .imageContainer {
     width: 100%;
+    position: relative;
+
+    .star {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(104.12deg, #282828 10.32%, #111111 85.25%);
+      border-radius: 50px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .starIcon {
+        svg {
+          margin-top: 2px;
+          width: 45px;
+          height: 45px;
+        }
+      }
+      .orange {
+        svg {
+          g {
+            path {
+              fill: var(--orange);
+            }
+          }
+        }
+      }
+      .green {
+        svg {
+          g {
+            path {
+              fill: var(--green);
+            }
+          }
+        }
+      }
+      .gray {
+        svg {
+          g {
+            path {
+              fill: gray;
+            }
+          }
+        }
+      }
+    }
 
     .image {
       width: 100%;
@@ -69,4 +121,8 @@
       }
     }
   }
+}
+
+.pvpCard {
+  max-width: 315px;
 }

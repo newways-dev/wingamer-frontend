@@ -2,21 +2,38 @@
   cursor: pointer;
 }
 
-.blue {
+.blue,
+.actionBlue {
   background: var(--blue);
   color: var(--blue);
 }
-.orange {
+.orange,
+.actionOrange {
   background: var(--orange);
   color: var(--orange);
 }
-.purple {
-  border: var(--purple);
+.purple,
+.actionPurple {
+  background: var(--purple);
   color: var(--purple);
 }
-.green {
-  border: var(--green);
+.green,
+.actionGreen {
+  background: var(--green);
   color: var(--green);
+}
+
+.actionBlue {
+  box-shadow: 0px 0px 15px rgba(86, 204, 242, 0.5);
+}
+.actionPurple {
+  box-shadow: 0px 0px 15px rgba(155, 81, 224, 0.5);
+}
+.actionGreen {
+  box-shadow: 0px 0px 15px rgba(39, 174, 96, 0.5);
+}
+.actionOrange {
+  box-shadow: 0px 0px 15px rgba(242, 153, 74, 0.5);
 }
 
 .disabled {

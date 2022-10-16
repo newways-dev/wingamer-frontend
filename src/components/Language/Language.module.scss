@@ -1,3 +1,7 @@
+.languageContainer {
+  position: relative;
+}
+
 .language {
   height: 20px;
 
@@ -6,5 +10,52 @@
     display: flex;
     align-items: center;
     gap: 8px;
+
+    cursor: pointer;
+
+    .active {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.options {
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  z-index: 200;
+
+  background: linear-gradient(104.12deg, #282828 10.32%, #111111 85.25%);
+  border-radius: 3px;
+
+  .option {
+    cursor: pointer;
+    padding: 10px;
+    height: 27px;
+    width: calc(100% + 20px);
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+
+    .image {
+      width: 16px;
+      height: 16px;
+
+      img {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
   }
 }

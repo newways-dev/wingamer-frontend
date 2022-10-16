@@ -7,7 +7,7 @@ export interface TitleProps
     HTMLAttributes<HTMLHeadingElement>,
     HTMLHeadingElement
   > {
-  text: string
+  text: string | JSX.Element
 }
 
 export const Title = ({ text, className }: TitleProps) => {

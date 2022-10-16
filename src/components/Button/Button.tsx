@@ -42,7 +42,13 @@ export const Button = ({
     case 'action':
       return (
         <button
-          className={clsx(styles.button, className, styles.action)}
+          className={clsx(styles.button, className, styles.action, {
+            [styles.actionBlue]: color === 'blue',
+            [styles.actionOrange]: color === 'orange',
+            [styles.actionPurple]: color === 'purple',
+            [styles.actionGreen]: color === 'green',
+            [styles.disabled]: disabled,
+          })}
           {...props}
         >
           {children}

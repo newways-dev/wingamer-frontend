@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import { Layout } from './layout/Layout'
-import { Coins, Fun, Home, Pvp } from './pages'
+import { Coins, CreatePvp, Fun, Home, Pvp } from './pages'
 
 function App() {
   return (
@@ -36,6 +36,14 @@ function App() {
           element={
             <Layout>
               <Pvp />
+            </Layout>
+          }
+        />
+        <Route
+          path="/create-pvp"
+          element={
+            <Layout>
+              <CreatePvp />
             </Layout>
           }
         />
