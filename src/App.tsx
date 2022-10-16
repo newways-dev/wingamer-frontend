@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import { Layout } from './layout/Layout'
-import { Coins, CreatePvp, Fun, Home, Pvp } from './pages'
+import { Account, Coins, CreatePvp, Fun, Home, NotFound, Pvp } from './pages'
 
 function App() {
   return (
@@ -48,10 +48,18 @@ function App() {
           }
         />
         <Route
+          path="/account"
+          element={
+            <Layout>
+              <Account />
+            </Layout>
+          }
+        />
+        <Route
           path="*"
           element={
             <Layout>
-              <h1>Not Found</h1>
+              <NotFound />
             </Layout>
           }
         />

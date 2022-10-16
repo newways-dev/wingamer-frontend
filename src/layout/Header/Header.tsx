@@ -4,27 +4,30 @@ import { useEffect, useState } from 'react'
 import { ReactSVG } from 'react-svg'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { Button, Language, Logo } from '../../components'
+import { Button, Language, Logo, Profile } from '../../components'
 import { links } from '../../helpers/links'
 import styles from './Header.module.scss'
 
+import image from '../../assets/images/profile-image.png'
 import search from '../../assets/icons/search.svg'
 import { selectColor } from '../../redux/color/selector'
 import { setColor } from '../../redux/color/slice'
 
 export const Header = () => {
+  const dispatch = useDispatch()
   const { pathname } = useLocation()
   const { color } = useSelector(selectColor)
-  const [active, setActive] = useState<number>(
+  const [active, setActive] = useState<number | null>(
     pathname === '/'
       ? 0
       : pathname === '/coins'
       ? 1
       : pathname === '/fun'
       ? 2
-      : 3
+      : pathname === '/pvp'
+      ? 3
+      : null
   )
-  const dispatch = useDispatch()
 
   useEffect(() => {
     pathname === '/'
@@ -33,7 +36,9 @@ export const Header = () => {
       ? dispatch(setColor('orange'))
       : pathname === '/fun'
       ? dispatch(setColor('green'))
-      : dispatch(setColor('purple'))
+      : pathname === '/pvp'
+      ? dispatch(setColor('purple'))
+      : dispatch(setColor('white'))
   }, [pathname, dispatch])
 
   return (
@@ -59,9 +64,12 @@ export const Header = () => {
             ))}
             <ReactSVG className={styles.search} src={search} />
           </ul>
-          <Button color={color} className={styles.login} type="rounded">
+          {/* <Button color={color} className={styles.login} type="rounded">
             Login
-          </Button>
+          </Button> */}
+          <Link to="/account">
+            <Profile userName="DenisVykes" coins="11.58 coins" image={image} />
+          </Link>
           <Language />
         </nav>
       </div>

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Footer } from './Footer/Footer'
 import { Header } from './Header/Header'
 import styles from './Layout.module.scss'
@@ -8,12 +9,14 @@ interface LayoutProps {
 }
 
 export const Layout = ({ children }: LayoutProps) => {
+  const { pathname } = useLocation()
+
   return (
     <div className={styles.layout}>
       <Header />
       <main className={styles.main}>{children}</main>
       <Footer />
-      <div className={styles.bottomShape} />
+      {pathname !== '/account' && <div className={styles.bottomShape} />}
     </div>
   )
 }
