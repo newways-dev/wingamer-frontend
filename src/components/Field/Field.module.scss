@@ -1,0 +1,26 @@
+.field {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  display: flex;
+  align-items: center;
+
+  .icon {
+    margin-right: 12px;
+    margin-top: 4px;
+  }
+
+  .input {
+    width: 100%;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    color: #fff;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -3,8 +3,11 @@ import { Button } from '../Button/Button'
 import { Coin } from '../Coin/Coin'
 import styles from './Card.module.scss'
 
+import starIcon from '../../assets/icons/star.svg'
 import img from '../../assets/images/TournamentCard.png'
 import { ColorsType } from '../../types/colors'
+import { ReactSVG } from 'react-svg'
+import clsx from 'clsx'
 
 export interface CardProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -13,7 +16,9 @@ export interface CardProps
   ends?: string
   blockPuzzle?: string
   button?: 'active' | 'disable'
+  star?: boolean
   color: ColorsType
+  pvp?: boolean
 }
 
 export const Card = ({
@@ -22,12 +27,26 @@ export const Card = ({
   button,
   ends,
   blockPuzzle,
+  star,
   color,
+  pvp,
 }: CardProps) => {
   return (
-    <div className={styles.card}>
+    <div className={clsx(styles.card, { [styles.pvpCard]: pvp })}>
       <div className={styles.imageContainer}>
         <img className={styles.image} src={img} alt="" />
+        {star && (
+          <div className={styles.star}>
+            <ReactSVG
+              className={clsx(styles.starIcon, {
+                [styles.orange]: color === 'orange',
+                [styles.green]: color === 'green',
+                [styles.gray]: button === 'disable',
+              })}
+              src={starIcon}
+            />
+          </div>
+        )}
       </div>
       <div className={styles.wrapper}>
         {blockPuzzle && ends && (

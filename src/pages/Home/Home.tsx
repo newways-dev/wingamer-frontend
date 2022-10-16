@@ -6,6 +6,7 @@ import styles from './Home.module.scss'
 export const Home = () => {
   const tournament = [...new Array(4)].map((_, index) => (
     <Card
+      pvp
       color="purple"
       blockPuzzle="Block Puzzle"
       coins="1,48 COIns"
@@ -22,6 +23,7 @@ export const Home = () => {
       coins="1,48 COIns"
       button="active"
       title="Block Puzzle"
+      star={true}
       key={index}
     />
   ))
@@ -33,7 +35,7 @@ export const Home = () => {
   return (
     <>
       <Intro />
-      <Section heading="pvp" className={styles.pvp}>
+      <Section link={false} heading="pvp" className={styles.pvp}>
         {tournament}
         <div className={styles.slider}>
           <Slides color="purple" />
@@ -42,10 +44,10 @@ export const Home = () => {
           </a>
         </div>
       </Section>
-      <Section heading="coin" className={styles.coin}>
+      <Section link heading="coin" className={styles.coin}>
         {coinGames}
       </Section>
-      <Section heading="fun" className={styles.fun}>
+      <Section link heading="fun" className={styles.fun}>
         {funGames}
       </Section>
     </>

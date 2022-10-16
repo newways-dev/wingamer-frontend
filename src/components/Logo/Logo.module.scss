@@ -7,11 +7,24 @@
   .win {
     font-weight: 400;
     font-size: 44px;
-    color: var(--blue);
     font-family: var(--rubik-glitch);
     text-shadow: 0px 0px 15px rgba(86, 204, 242, 0.5);
     text-transform: uppercase;
   }
+
+  .blue {
+    color: var(--blue);
+  }
+  .orange {
+    color: var(--orange);
+  }
+  .purple {
+    color: var(--purple);
+  }
+  .green {
+    color: var(--green);
+  }
+
   .gamer {
     margin-top: -7px;
     margin-left: 2px;

@@ -1,0 +1,140 @@
+.createPvp {
+  width: 100%;
+  margin-bottom: 100px;
+
+  .wrapper {
+    margin-top: 60px;
+    padding: 0 60px;
+
+    .heading {
+      padding: 40px;
+      height: 156px;
+
+      p {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 76px;
+        text-transform: uppercase;
+        color: #fff;
+
+        span {
+          color: var(--purple);
+        }
+      }
+
+      background: linear-gradient(104.12deg, #282828 10.32%, #111111 85.25%);
+      border-radius: 3px;
+    }
+
+    .firstStep {
+      margin-top: 100px;
+      padding: 20px 40px;
+      height: 68px;
+      background: linear-gradient(104.12deg, #282828 10.32%, #111111 85.25%);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        color: #fff;
+        span {
+          color: var(--purple);
+        }
+      }
+
+      .search {
+        width: 260px;
+        height: 40px;
+        border-radius: 10px;
+        padding: 10px;
+        opacity: 0.6;
+
+        input {
+          color: #fff;
+          opacity: 1;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          font-family: var(--rubik);
+        }
+      }
+    }
+
+    .cards {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .secondStep {
+      margin-top: 100px;
+      padding-top: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+      height: 352px;
+      background: linear-gradient(104.12deg, #282828 10.32%, #111111 85.25%);
+      border-radius: 3px;
+
+      p {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        span {
+          color: var(--purple);
+        }
+
+        padding-bottom: 30px;
+        border-bottom: 1px solid #686868;
+      }
+
+      .form {
+        padding-top: 30px;
+        padding-bottom: 50px;
+        margin-top: 30px;
+        height: 245px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        button {
+          width: 244px;
+          height: 64px;
+        }
+
+        .fields {
+          display: grid;
+          grid-template-columns: auto 70px auto 1fr auto;
+          width: 100%;
+
+          .startField,
+          .endField,
+          .coinField {
+            width: 260px;
+            height: 40px;
+            border-radius: 10px;
+            padding: 10px;
+            opacity: 0.6;
+          }
+
+          input {
+            color: #fff;
+            opacity: 1;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            font-family: var(--rubik);
+          }
+        }
+      }
+    }
+  }
+}

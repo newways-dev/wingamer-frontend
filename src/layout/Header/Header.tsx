@@ -1,26 +1,40 @@
 import clsx from 'clsx'
 import { Link, useLocation } from 'react-router-dom'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ReactSVG } from 'react-svg'
+import { useSelector, useDispatch } from 'react-redux'
+
 import { Button, Language, Logo } from '../../components'
-import { languages } from '../../helpers/languages'
 import { links } from '../../helpers/links'
 import styles from './Header.module.scss'
 
 import search from '../../assets/icons/search.svg'
+import { selectColor } from '../../redux/color/selector'
+import { setColor } from '../../redux/color/slice'
 
 export const Header = () => {
-  const [active, setActive] = useState<number>(0)
   const { pathname } = useLocation()
-
-  const color =
+  const { color } = useSelector(selectColor)
+  const [active, setActive] = useState<number>(
     pathname === '/'
-      ? 'blue'
+      ? 0
       : pathname === '/coins'
-      ? 'orange'
+      ? 1
       : pathname === '/fun'
-      ? 'green'
-      : 'purple'
+      ? 2
+      : 3
+  )
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    pathname === '/'
+      ? dispatch(setColor('blue'))
+      : pathname === '/coins'
+      ? dispatch(setColor('orange'))
+      : pathname === '/fun'
+      ? dispatch(setColor('green'))
+      : dispatch(setColor('purple'))
+  }, [pathname, dispatch])
 
   return (
     <header className={styles.header}>
@@ -48,7 +62,7 @@ export const Header = () => {
           <Button color={color} className={styles.login} type="rounded">
             Login
           </Button>
-          <Language languages={languages} />
+          <Language />
         </nav>
       </div>
     </header>

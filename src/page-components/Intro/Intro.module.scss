@@ -14,5 +14,90 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    .main {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .info {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          margin-top: 40px;
+          width: 100%;
+        }
+
+        .description {
+          margin-top: 10px;
+          max-width: 475px;
+          width: 100%;
+
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 24px;
+
+          color: #ffffff;
+
+          .coinGames {
+            color: var(--orange);
+          }
+          .funGames {
+            color: var(--green);
+          }
+          .pvpGames {
+            color: var(--purple);
+          }
+        }
+
+        .button {
+          margin-top: 100px;
+          width: 234px;
+          height: 64px;
+          border-radius: 3px;
+        }
+      }
+
+      .shapes {
+        width: 60%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: right;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        div {
+          &:nth-child(3) {
+            margin-right: 52px;
+          }
+          &:nth-child(10) {
+            margin-right: 52px;
+          }
+          &:nth-child(37) {
+            margin-right: 45px;
+          }
+        }
+
+        .transparent {
+          background: none;
+        }
+        .orange {
+          background: var(--orange-gradient);
+        }
+        .green {
+          background: var(--green-gradient);
+        }
+        .purple {
+          background: var(--purple-gradient);
+        }
+        .blue {
+          background: var(--blue-gradient);
+        }
+      }
+    }
   }
 }

@@ -9,13 +9,13 @@
     }
   }
 
-  div {
-    div {
-      div {
-        max-width: 315px;
-      }
-    }
-  }
+  // div {
+  //   div {
+  //     div {
+  //       max-width: 315px !important;
+  //     }
+  //   }
+  // }
 
   .seeMore {
     color: var(--purple);
@@ -45,14 +45,6 @@
     color: var(--orange);
   }
 
-  div {
-    div {
-      div {
-        max-width: 248px;
-      }
-    }
-  }
-
   &::before {
     content: '';
     position: absolute;
@@ -66,7 +58,6 @@
 }
 
 .fun {
-  margin-bottom: 100px;
   a {
     color: var(--green);
   }
