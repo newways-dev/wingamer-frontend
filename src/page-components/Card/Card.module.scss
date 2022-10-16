@@ -1,0 +1,24 @@
+.accountCard {
+  background: linear-gradient(104.12deg, #282828 10.32%, #111111 85.25%);
+  border-radius: 3px;
+
+  .wrapper {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    .heading {
+      p {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        span {
+          color: var(--purple);
+        }
+
+        padding-bottom: 30px;
+        border-bottom: 1px solid #686868;
+      }
+    }
+  }
+}

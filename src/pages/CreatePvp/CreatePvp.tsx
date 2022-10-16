@@ -1,4 +1,5 @@
 import { Button, Card, Field } from '../../components'
+import { Card as PageCard } from '../../page-components'
 import styles from './CreatePvp.module.scss'
 
 import search from '../../assets/icons/search.svg'
@@ -9,6 +10,12 @@ export const CreatePvp = () => {
   const pvpGames = [...new Array(20)].map((_, index) => (
     <Card color="purple" button="active" title="Block Puzzle" key={index} />
   ))
+
+  const cardHeading = (
+    <p>
+      <span>02.</span> Set tournament options
+    </p>
+  )
 
   return (
     <div className={styles.createPvp}>
@@ -29,10 +36,7 @@ export const CreatePvp = () => {
           />
         </div>
         <div className={styles.cards}>{pvpGames}</div>
-        <div className={styles.secondStep}>
-          <p>
-            <span>02.</span> Set tournament options
-          </p>
+        <PageCard className={styles.secondStep} heading={cardHeading}>
           <form className={styles.form}>
             <div className={styles.fields}>
               <Field
@@ -57,7 +61,7 @@ export const CreatePvp = () => {
               Create PVP
             </Button>
           </form>
-        </div>
+        </PageCard>
       </div>
     </div>
   )
