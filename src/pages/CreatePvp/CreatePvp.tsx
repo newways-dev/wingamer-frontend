@@ -4,7 +4,7 @@ import styles from './CreatePvp.module.scss'
 
 import search from '../../assets/icons/search.svg'
 import date from '../../assets/icons/date.svg'
-import coin from '../../assets/icons/coin-fee.svg'
+import coin from '../../assets/icons/purple.svg'
 
 export const CreatePvp = () => {
   const pvpGames = [...new Array(20)].map((_, index) => (
@@ -39,23 +39,11 @@ export const CreatePvp = () => {
         <PageCard className={styles.secondStep} heading={cardHeading}>
           <form className={styles.form}>
             <div className={styles.fields}>
-              <Field
-                className={styles.startField}
-                icon={date}
-                placeholder="Date of Start"
-              />
+              <Field icon={date} placeholder="Date of Start" />
               <div />
-              <Field
-                className={styles.endField}
-                icon={date}
-                placeholder="Date of Ends"
-              />
+              <Field icon={date} placeholder="Date of Ends" />
               <div />
-              <Field
-                className={styles.coinField}
-                icon={coin}
-                placeholder="Coins"
-              />
+              <Field icon={coin} placeholder="FEE" addition="Coins" />
             </div>
             <Button color="purple" type="action">
               Create PVP

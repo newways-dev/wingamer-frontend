@@ -99,23 +99,14 @@
           grid-template-columns: auto 70px auto 1fr auto;
           width: 100%;
 
-          .startField,
-          .endField,
-          .coinField {
-            width: 260px;
-            height: 40px;
-            border-radius: 10px;
-            padding: 10px;
-            opacity: 0.6;
-          }
-
-          input {
-            color: #fff;
+          span {
+            color: #939393;
             opacity: 1;
             font-weight: 500;
             font-size: 14px;
             line-height: 17px;
             font-family: var(--rubik);
+            text-transform: uppercase;
           }
         }
       }

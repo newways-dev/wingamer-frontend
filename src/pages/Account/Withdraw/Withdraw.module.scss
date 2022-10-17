@@ -1,0 +1,51 @@
+.fields {
+  margin-top: 60px;
+
+  display: grid;
+  grid-template-columns: auto 70px auto 1fr auto;
+  grid-template-rows: auto auto;
+  row-gap: 45px;
+
+  grid-template-areas:
+    'username . email . coins'
+    'message message message . .';
+
+  .username {
+    grid-area: username;
+  }
+  .email {
+    grid-area: email;
+  }
+  .coins {
+    grid-area: coins;
+  }
+  .message {
+    grid-area: message;
+    width: 100%;
+  }
+}
+
+.terms {
+  margin-top: 20px;
+  margin-bottom: 60px;
+
+  display: flex;
+  align-items: flex-start;
+
+  p {
+    margin-left: 5px;
+
+    max-width: 45%;
+    width: 100%;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    opacity: 0.6;
+
+    span {
+      cursor: pointer;
+      color: var(--blue);
+      text-decoration: underline;
+    }
+  }
+}

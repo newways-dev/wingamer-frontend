@@ -1,0 +1,80 @@
+.avatar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .check {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+      180deg,
+      #41b2f2 0%,
+      #2d9cdb 11.98%,
+      #2d9cdb 86.98%,
+      #1478b0 100%
+    );
+    box-shadow: 0px 0px 15px rgba(86, 204, 242, 0.5);
+
+    div {
+      div {
+        svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+
+  .image {
+    height: 106px;
+    width: 106px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .selected {
+    border: 3px solid #2d9cdb;
+  }
+
+  .price {
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--blue);
+    text-shadow: 0px 0px 15px rgba(86, 204, 242, 0.5);
+  }
+
+  button {
+    font-family: var(--rubik);
+
+    width: 100px;
+    height: 40px;
+    opacity: 0.6;
+
+    border: 2px solid #fff;
+    border-radius: 20px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
