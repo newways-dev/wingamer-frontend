@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { selectAccountPage } from '../redux/account-page/selector'
 import { Footer } from './Footer/Footer'
 import { Header } from './Header/Header'
 import styles from './Layout.module.scss'
@@ -9,14 +10,16 @@ interface LayoutProps {
 }
 
 export const Layout = ({ children }: LayoutProps) => {
-  const { pathname } = useLocation()
+  const { page } = useSelector(selectAccountPage)
 
   return (
     <div className={styles.layout}>
       <Header />
       <main className={styles.main}>{children}</main>
       <Footer />
-      {pathname !== '/account' && <div className={styles.bottomShape} />}
+      {page !== 'Buy Coins' && page !== 'Logs' && page !== 'Withdraw coins' && (
+        <div className={styles.bottomShape} />
+      )}
     </div>
   )
 }

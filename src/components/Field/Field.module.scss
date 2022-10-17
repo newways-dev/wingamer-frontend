@@ -9,6 +9,11 @@
     margin-top: 4px;
   }
 
+  width: 260px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+
   .input {
     width: 100%;
     text-transform: uppercase;
@@ -19,8 +24,18 @@
     letter-spacing: 0.1em;
     color: #fff;
 
+    opacity: 1;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: var(--rubik);
+
     &:focus {
       outline: none;
     }
+  }
+  span {
+    text-transform: uppercase;
+    opacity: 0.6;
   }
 }

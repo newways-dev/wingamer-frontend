@@ -5,9 +5,22 @@ export interface InputProps
     HTMLAttributes<HTMLInputElement>,
     HTMLInputElement
   > {
-  placeholder: string
+  placeholder?: string
+  type?: 'checkbox' | 'email' | 'password' | 'text'
 }
 
-export const Input = ({ placeholder, className, ...props }: InputProps) => {
-  return <input placeholder={placeholder} className={className} {...props} />
+export const Input = ({
+  placeholder,
+  type,
+  className,
+  ...props
+}: InputProps) => {
+  return (
+    <input
+      type={type}
+      placeholder={placeholder}
+      className={className}
+      {...props}
+    />
+  )
 }

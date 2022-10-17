@@ -68,11 +68,11 @@ export const Intro = () => {
               <Title className={styles.title} text={title} />
               <p className={styles.description}>{description}</p>
             </div>
-            <Button color={color} className={styles.button} type="action">
-              <Link to="/create-pvp">
+            <Link to="/create-pvp">
+              <Button color={color} className={styles.button} type="action">
                 {page === 'main' ? 'Start now' : 'Create PVP'}
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
           <div className={styles.shapes}>
             {page === 'main' && <Squares />}

@@ -1,8 +1,40 @@
 .buyCoins {
   width: 100%;
-  margin-top: 50px;
-  margin-bottom: 100px;
 
   .card {
+    .description {
+      margin-top: 60px;
+      max-width: 769px;
+      width: 100%;
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+      color: #fff;
+      opacity: 0.6;
+    }
+
+    .form {
+      margin-top: 20px;
+
+      .fields {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        margin-bottom: 60px;
+
+        svg {
+          cursor: pointer;
+          opacity: 0.6;
+        }
+
+        .field {
+          width: 260px;
+          height: 40px;
+          border-radius: 10px;
+          padding: 10px;
+        }
+      }
+    }
   }
 }
