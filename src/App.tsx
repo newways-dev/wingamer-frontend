@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import { Layout } from './layout/Layout'
 import { Account, Coins, CreatePvp, Fun, Home, NotFound, Pvp } from './pages'
+import { Layout } from './layout/Layout'
 
 function App() {
   return (

@@ -16,7 +16,7 @@ export const Avatars = () => {
           ))}
         </div>
       </Card>
-      <Card heading="Premium avatars">
+      <Card className={styles.premiun} heading="Premium avatars">
         <div className={styles.avatars}>
           {premium.map((avatar, index) => (
             <Avatar

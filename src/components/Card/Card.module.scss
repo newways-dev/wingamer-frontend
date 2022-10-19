@@ -7,6 +7,10 @@
 
   max-width: 248px;
 
+  @media screen and (max-width: 400px) {
+    max-width: 100%;
+  }
+
   .imageContainer {
     width: 100%;
     position: relative;
@@ -125,4 +129,8 @@
 
 .pvpCard {
   max-width: 315px;
+
+  @media screen and (max-width: 400px) {
+    max-width: 100%;
+  }
 }

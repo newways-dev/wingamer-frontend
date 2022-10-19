@@ -12,18 +12,20 @@ export interface SearchProps
   placeholder: string
   icon: string
   addition?: string
+  type?: 'text' | 'email' | 'password'
 }
 
 export const Field = ({
   addition,
   icon,
   placeholder,
+  type,
   className,
 }: SearchProps) => {
   return (
     <div className={clsx(styles.field, className)}>
       <ReactSVG className={styles.icon} src={icon} />
-      <Input className={styles.input} placeholder={placeholder} />
+      <Input type={type} className={styles.input} placeholder={placeholder} />
       <span>{addition}</span>
     </div>
   )

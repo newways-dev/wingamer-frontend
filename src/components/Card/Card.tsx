@@ -64,6 +64,7 @@ export const Card = ({
             </div>
           )}
           <Button
+            // color="gray"
             color={color}
             className={styles.button}
             disabled={button === 'disable'}
