@@ -8,24 +8,18 @@ import clsx from 'clsx'
 
 export const Logs = () => {
   const heading = (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-      }}
-    >
+    <div className={styles.heading}>
       <p>Transactions Logs</p>
-      <div style={{ display: 'flex', gap: '70px' }}>
-        <Field icon={date} placeholder="Date From" />
-        <Field icon={date} placeholder="Date To" />
+      <div className={styles.fields}>
+        <Field className={styles.field} icon={date} placeholder="Date From" />
+        <Field className={styles.field} icon={date} placeholder="Date To" />
       </div>
     </div>
   )
 
   return (
     <>
-      <Card heading={heading}>
+      <Card className={styles.card} heading={heading}>
         <ul className={styles.logs}>
           {logs.map((log, index) => (
             <li key={index} className={styles.log}>

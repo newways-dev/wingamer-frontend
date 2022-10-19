@@ -4,4 +4,9 @@
   line-height: 76px;
   text-transform: uppercase;
   color: #fff;
+
+  @media screen and (max-width: 720px) {
+    font-size: 48px;
+    line-height: 57px;
+  }
 }

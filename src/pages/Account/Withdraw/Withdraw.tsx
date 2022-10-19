@@ -18,7 +18,12 @@ export const Withdraw = () => {
             placeholder="Username"
             icon={user}
           />
-          <Field className={styles.email} placeholder="E-Mail" icon={email} />
+          <Field
+            type="email"
+            className={styles.email}
+            placeholder="E-Mail"
+            icon={email}
+          />
           <Field
             className={styles.coins}
             placeholder="11.58"

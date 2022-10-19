@@ -1,0 +1,41 @@
+.search {
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+
+  padding-top: 100px;
+  text-align: center;
+
+  .close {
+    cursor: pointer;
+    position: absolute;
+    top: 36px;
+    right: 36px;
+  }
+
+  .title {
+    font-family: var(--rubik-mono-one);
+    font-size: 64px;
+    line-height: 79px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .center {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .input {
+      max-width: 1024px;
+      width: 100%;
+      height: 60px;
+      border-radius: 20px;
+      margin-bottom: 80px;
+    }
+  }
+}

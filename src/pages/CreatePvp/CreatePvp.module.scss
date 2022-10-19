@@ -6,9 +6,17 @@
     margin-top: 60px;
     padding: 0 60px;
 
+    @media screen and (max-width: 720px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     .heading {
       padding: 40px;
-      height: 156px;
+
+      @media screen and (max-width: 720px) {
+        padding: 40px 15px;
+      }
 
       p {
         font-weight: 700;
@@ -20,6 +28,11 @@
         span {
           color: var(--purple);
         }
+
+        @media screen and (max-width: 720px) {
+          font-size: 48px;
+          line-height: 57px;
+        }
       }
 
       background: linear-gradient(104.12deg, #282828 10.32%, #111111 85.25%);
@@ -29,12 +42,19 @@
     .firstStep {
       margin-top: 100px;
       padding: 20px 40px;
-      height: 68px;
       background: linear-gradient(104.12deg, #282828 10.32%, #111111 85.25%);
       border-radius: 3px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @media screen and (max-width: 720px) {
+        margin-top: 60px;
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
 
       p {
         font-weight: 700;
@@ -62,6 +82,10 @@
           line-height: 17px;
           font-family: var(--rubik);
         }
+
+        @media screen and (max-width: 720px) {
+          width: 100%;
+        }
       }
     }
 
@@ -71,27 +95,39 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 20px;
+
+      @media screen and (max-width: 720px) {
+        margin-top: 30px;
+        padding: 0 15px;
+      }
     }
 
     .secondStep {
       margin-top: 100px;
-      height: 352px;
       background: linear-gradient(104.12deg, #282828 10.32%, #111111 85.25%);
       border-radius: 3px;
 
       .form {
         padding-top: 30px;
-        padding-bottom: 50px;
         margin-top: 30px;
-        height: 245px;
 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
         button {
+          margin-top: 50px;
           width: 244px;
           height: 64px;
+
+          @media screen and (max-width: 1100px) {
+            margin-top: 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-self: center;
+          }
         }
 
         .fields {
@@ -107,6 +143,21 @@
             line-height: 17px;
             font-family: var(--rubik);
             text-transform: uppercase;
+          }
+
+          @media screen and (max-width: 1100px) {
+            grid-template-columns: 1fr;
+            row-gap: 10px;
+
+            .start,
+            .end,
+            .coins {
+              width: 100%;
+            }
+
+            .coins {
+              margin-top: 15px;
+            }
           }
         }
       }

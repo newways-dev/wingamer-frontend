@@ -2,7 +2,6 @@
   max-width: 1320px;
   width: 100%;
   margin: 0 auto;
-  height: 500px;
   margin-top: 60px;
 
   background: linear-gradient(104.12deg, #282828 10.32%, #111111 85.25%);
@@ -14,6 +13,11 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 720px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
     .main {
       height: 100%;
@@ -59,11 +63,19 @@
           width: 234px;
           height: 64px;
           border-radius: 3px;
+
+          @media screen and (max-width: 720px) {
+            margin-top: 40px;
+          }
         }
       }
 
       .shapes {
         width: 60%;
+        img {
+          width: 100%;
+        }
+
         display: flex;
         align-items: flex-start;
         justify-content: right;
@@ -96,6 +108,19 @@
         }
         .blue {
           background: var(--blue-gradient);
+        }
+      }
+
+      @media screen and (max-width: 720px) {
+        flex-direction: column;
+
+        .info {
+          width: 100%;
+        }
+
+        .shapes {
+          width: 100%;
+          margin-top: 45px;
         }
       }
     }

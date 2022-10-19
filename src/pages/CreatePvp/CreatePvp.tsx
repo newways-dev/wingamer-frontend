@@ -39,15 +39,31 @@ export const CreatePvp = () => {
         <PageCard className={styles.secondStep} heading={cardHeading}>
           <form className={styles.form}>
             <div className={styles.fields}>
-              <Field icon={date} placeholder="Date of Start" />
+              <Field
+                className={styles.start}
+                icon={date}
+                placeholder="Date of Start"
+              />
               <div />
-              <Field icon={date} placeholder="Date of Ends" />
+              <Field
+                className={styles.end}
+                icon={date}
+                placeholder="Date of Ends"
+              />
               <div />
-              <Field icon={coin} placeholder="FEE" addition="Coins" />
+              <Field
+                className={styles.coins}
+                icon={coin}
+                placeholder="FEE"
+                addition="Coins"
+              />
+              <Button color="purple" type="action">
+                Create PVP
+              </Button>
             </div>
-            <Button color="purple" type="action">
+            {/* <Button color="purple" type="action">
               Create PVP
-            </Button>
+            </Button> */}
           </form>
         </PageCard>
       </div>
