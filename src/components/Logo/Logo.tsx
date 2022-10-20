@@ -9,13 +9,12 @@ export const Logo = () => {
   return (
     <div className={styles.logo}>
       <span
-        className={clsx(
-          styles.win,
-          { [styles.blue]: color === 'blue' },
-          { [styles.orange]: color === 'orange' },
-          { [styles.green]: color === 'green' },
-          { [styles.purple]: color === 'purple' }
-        )}
+        className={clsx(styles.win, {
+          [styles.blue]: color === 'blue',
+          [styles.orange]: color === 'orange',
+          [styles.green]: color === 'green',
+          [styles.purple]: color === 'purple',
+        })}
       >
         WIN
       </span>

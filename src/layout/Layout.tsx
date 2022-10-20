@@ -1,10 +1,10 @@
 import clsx from 'clsx'
 import { ReactNode } from 'react'
 import { useSelector } from 'react-redux'
-import { Menu, Search } from '../components'
+import { Menu, Modal } from '../components'
 import { selectAccountPage } from '../redux/account-page/selector'
 import { selectMenu } from '../redux/menu/selector'
-import { selectSearch } from '../redux/search/selector'
+import { selectModal } from '../redux/modal/selector'
 import { Footer } from './Footer/Footer'
 import { Header } from './Header/Header'
 import styles from './Layout.module.scss'
@@ -15,20 +15,20 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   const { page } = useSelector(selectAccountPage)
-  const { open } = useSelector(selectSearch)
+  const { openModal } = useSelector(selectModal)
   const { openMenu } = useSelector(selectMenu)
 
   return (
     <div
       className={clsx(
         styles.layout,
-        { [styles.openSearch]: open },
+        { [styles.openModal]: openModal },
         { [styles.openMenu]: openMenu }
       )}
     >
       <Header />
       {openMenu && <Menu />}
-      {open && <Search className={styles.search} />}
+      {openModal && <Modal className={styles.modal} />}
       <main className={styles.main}>{children}</main>
       <Footer />
       {page !== 'Buy Coins' && page !== 'Logs' && page !== 'Withdraw coins' && (

@@ -1,7 +1,1 @@
-export type ColorsType =
-  | 'orange'
-  | 'purple'
-  | 'blue'
-  | 'green'
-  | 'white'
-  | 'gray'
+export type ColorsType = 'orange' | 'purple' | 'blue' | 'green' | 'gray'
