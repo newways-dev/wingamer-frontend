@@ -7,18 +7,14 @@
   z-index: 1;
 }
 
-.openSearch,
+.openModal,
 .openMenu {
   max-height: 100vh;
   height: 100%;
   overflow: hidden;
 }
 
-// .openMenu {
-//   background: linear-gradient(104.12deg, #282828 10.32%, #111111 85.25%);
-// }
-
-.search {
+.modal {
   z-index: 200;
   position: absolute;
   top: 0;

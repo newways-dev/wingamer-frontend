@@ -1,0 +1,209 @@
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 36px;
+  right: 36px;
+}
+
+.search {
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+
+  padding-top: 100px;
+  text-align: center;
+
+  .title {
+    font-family: var(--rubik-mono-one);
+    font-size: 64px;
+    line-height: 79px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .center {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .input {
+      max-width: 1024px;
+      width: 100%;
+      height: 60px;
+      border-radius: 20px;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+
+  .card {
+    padding-top: 50px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .fields {
+    padding-top: 50px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .field {
+      height: 60px;
+      width: 100%;
+
+      &:nth-child(2) {
+        margin-top: 20px;
+      }
+    }
+
+    .forgotPassword {
+      cursor: pointer;
+      margin-top: 20px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
+    button {
+      margin-top: 40px;
+    }
+
+    .noAccount {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      text-transform: uppercase;
+
+      p {
+        &:nth-child(1) {
+          opacity: 0.6;
+        }
+      }
+
+      .signinLink {
+        cursor: pointer;
+        opacity: 1;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: var(--blue);
+        text-shadow: 0px 0px 15px rgba(86, 204, 242, 0.5);
+      }
+    }
+  }
+}
+
+.signin {
+  width: 100%;
+  height: 100vh;
+
+  .card {
+    padding-top: 50px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding-top: 50px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .field {
+      height: 60px;
+      width: 100%;
+
+      &:nth-child(2) {
+        margin-top: 20px;
+      }
+    }
+
+    button {
+      margin-top: 40px;
+    }
+
+    .haveAccount {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      text-transform: uppercase;
+
+      p {
+        &:nth-child(1) {
+          opacity: 0.6;
+        }
+      }
+
+      .signinLink {
+        cursor: pointer;
+        opacity: 1;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: var(--blue);
+        text-shadow: 0px 0px 15px rgba(86, 204, 242, 0.5);
+      }
+    }
+  }
+}
+
+.recovery {
+  width: 100%;
+  height: 100vh;
+
+  .card {
+    padding-top: 50px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding-top: 50px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .field {
+      height: 60px;
+      width: 100%;
+    }
+
+    button {
+      margin-top: 40px;
+    }
+  }
+}

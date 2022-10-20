@@ -34,31 +34,10 @@ a {
   --purple: #9b51e0;
   --red: #eb5757;
 
-  --blue-hover: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.1)
-    ),
-    #2d9cdb;
-  --orange-hover: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.1)
-    ),
-    #f2994a;
-  --green-hover: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.1)
-    ),
-    #27ae60;
-
-  --purple-hover: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.1)
-    ),
-    #9b51e0;
+  --blue-hover: #57b0e2;
+  --orange-hover: #f5ad6e;
+  --green-hover: #52be80;
+  --purple-hover: #af74e6;
 
   --blue-gradient: linear-gradient(
     180deg,

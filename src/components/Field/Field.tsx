@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import clsx from 'clsx'
 import { ReactSVG } from 'react-svg'
 import { DetailedHTMLProps, HTMLAttributes } from 'react'
@@ -11,7 +12,7 @@ export interface SearchProps
   > {
   placeholder: string
   icon: string
-  addition?: string
+  addition?: ReactNode
   type?: 'text' | 'email' | 'password'
 }
 
