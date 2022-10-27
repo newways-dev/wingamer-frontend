@@ -19,7 +19,7 @@ export const Tabs = ({ className }: TabsProps) => {
     'Favorites',
     'Buy Coins',
     'Avatars',
-    'Logs',
+    'Transaction logs',
     'Withdraw coins',
   ]
 

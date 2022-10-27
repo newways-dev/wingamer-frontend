@@ -36,7 +36,7 @@ export const Home = () => {
     <>
       <Intro />
       <Section link={false} heading="pvp" className={styles.pvp}>
-        {tournament}
+        <div className={styles.tours}>{tournament}</div>
         <div className={styles.slider}>
           <Slides color="purple" />
           <a href="/" className={styles.seeMore}>

@@ -68,7 +68,7 @@ export const Intro = () => {
               <Title className={styles.title} text={title} />
               <p className={styles.description}>{description}</p>
             </div>
-            <Link to="/create-pvp">
+            <Link to={page === 'main' ? '/coins' : '/create-pvp'}>
               <Button color={color} className={styles.button} type="action">
                 {page === 'main' ? 'Start now' : 'Create PVP'}
               </Button>

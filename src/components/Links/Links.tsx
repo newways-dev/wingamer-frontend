@@ -1,13 +1,13 @@
 import clsx from 'clsx'
-import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { DetailedHTMLProps, HTMLAttributes } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { links } from '../../helpers/links'
-import { selectColor } from '../../redux/color/selector'
+import { Link } from 'react-router-dom'
 import styles from './Links.module.scss'
 import { useDispatch } from 'react-redux'
 import { setOpen } from '../../redux/menu/slice'
+import { selectPage } from '../../redux/page/selector'
+import { Pages } from '../../types/pages'
+import { setPage } from '../../redux/page/slice'
 
 export interface LinksProps
   extends DetailedHTMLProps<
@@ -17,28 +17,62 @@ export interface LinksProps
 
 export const Links = ({ className }: LinksProps) => {
   const dispatch = useDispatch()
-  const { color } = useSelector(selectColor)
-  const { pathname } = useLocation()
-  const [active, setActive] = useState<number | null>(
-    pathname === '/'
-      ? 0
-      : pathname === '/coins'
-      ? 1
-      : pathname === '/fun'
-      ? 2
-      : pathname === '/pvp'
-      ? 3
-      : null
-  )
+  const { page } = useSelector(selectPage)
 
-  const handleClick = (index: number) => {
-    setActive(index)
+  // const { color } = useSelector(selectColor)
+  // const { pathname } = useLocation()
+  // const [active, setActive] = useState<number | null>(
+  //   pathname === '/'
+  //     ? 0
+  //     : pathname === '/coins'
+  //     ? 1
+  //     : pathname === '/fun'
+  //     ? 2
+  //     : pathname === '/pvp'
+  //     ? 3
+  //     : null
+  // )
+
+  const handleClick = (page: Pages) => {
     dispatch(setOpen(false))
+    dispatch(setPage(page))
   }
 
   return (
     <ul className={clsx(styles.links, className)}>
-      {links.map((link, index) => (
+      <Link to="/">
+        <li
+          onClick={() => handleClick('main')}
+          className={clsx(styles.link, { [styles.blue]: page === 'main' })}
+        >
+          Homepage
+        </li>
+      </Link>
+      <Link to="/coins">
+        <li
+          onClick={() => handleClick('coins')}
+          className={clsx(styles.link, { [styles.orange]: page === 'coins' })}
+        >
+          Play 4 coins
+        </li>
+      </Link>
+      <Link to="/fun">
+        <li
+          onClick={() => handleClick('fun')}
+          className={clsx(styles.link, { [styles.green]: page === 'fun' })}
+        >
+          Play 4 fun
+        </li>
+      </Link>
+      <Link to="/pvp">
+        <li
+          onClick={() => handleClick('pvp')}
+          className={clsx(styles.link, { [styles.purple]: page === 'pvp' })}
+        >
+          PVP
+        </li>
+      </Link>
+      {/* {links.map((link, index) => (
         <Link key={index} to={link.link}>
           <li
             onClick={() => handleClick(index)}
@@ -52,7 +86,7 @@ export const Links = ({ className }: LinksProps) => {
             {link.title}
           </li>
         </Link>
-      ))}
+      ))} */}
     </ul>
   )
 }

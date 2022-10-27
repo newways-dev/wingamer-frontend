@@ -11,7 +11,7 @@ export interface SearchProps
     HTMLInputElement
   > {
   placeholder: string
-  icon: string
+  icon?: string
   addition?: ReactNode
   type?: 'text' | 'email' | 'password'
 }
@@ -25,7 +25,7 @@ export const Field = ({
 }: SearchProps) => {
   return (
     <div className={clsx(styles.field, className)}>
-      <ReactSVG className={styles.icon} src={icon} />
+      {icon && <ReactSVG className={styles.icon} src={icon} />}
       <Input type={type} className={styles.input} placeholder={placeholder} />
       <span>{addition}</span>
     </div>
