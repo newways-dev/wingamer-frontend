@@ -5,9 +5,11 @@ import avatar from './avatar/slice'
 import search from './search/slice'
 import menu from './menu/slice'
 import modal from './modal/slice'
+import page from './page/slice'
 
 export const store = configureStore({
   reducer: {
+    page,
     color,
     accountPage,
     avatar,

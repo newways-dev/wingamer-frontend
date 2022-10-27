@@ -1,21 +1,30 @@
-import { Logo } from '../../components'
+import { FooterLinks, Logo } from '../../components'
 import styles from './Footer.module.scss'
 
 export const Footer = () => {
-  const links = ['Contact US', 'FAQ', 'Terms and Conditions', 'Privacy Policy']
-
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
         <div className={styles.top}>
           <Logo />
-          <ul className={styles.links}>
-            {links.map((link, index) => (
-              <li key={index} className={styles.link}>
-                {link}
-              </li>
-            ))}
-          </ul>
+          <FooterLinks />
+          {/* <ul className={styles.links}>
+            <Link to="/contact-us">
+              <li className={styles.link}>Contact US</li>
+            </Link>
+            <Link to="/about-us">
+              <li className={styles.link}>About Us</li>
+            </Link>
+            <Link to="/faq">
+              <li className={styles.link}>FAQ</li>
+            </Link>
+            <Link to="/terms-of-conditions">
+              <li className={styles.link}>Terms and Conditions</li>
+            </Link>
+            <Link to="/privacy-policy">
+              <li className={styles.link}>Privacy Policy</li>
+            </Link>
+          </ul> */}
         </div>
         <div className={styles.contacts}>
           <span>8 (800) 123-45-67</span>

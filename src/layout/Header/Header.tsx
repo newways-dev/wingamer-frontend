@@ -57,7 +57,7 @@ export const Header = () => {
             className={styles.search}
             src={search}
           />
-          <button
+          {/* <button
             className={clsx(styles.login, {
               [styles.loginBlue]: color === 'blue',
               [styles.loginOrange]: color === 'orange',
@@ -67,10 +67,10 @@ export const Header = () => {
             onClick={() => handleLogin()}
           >
             Login
-          </button>
-          {/* <Link to="/account">
+          </button> */}
+          <Link to="/account">
             <Profile userName="DenisVykes" coins="11.58 coins" image={image} />
-          </Link> */}
+          </Link>
           <Language className={styles.language} />
           <ReactSVG
             onClick={() => dispatch(setMenuOpen(!openMenu))}

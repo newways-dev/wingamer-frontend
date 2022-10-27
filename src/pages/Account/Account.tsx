@@ -31,7 +31,7 @@ export const Account = () => {
           {page === 'Favorites' && <Favorites className={styles.favorites} />}
           {page === 'Buy Coins' && <BuyCoins />}
           {page === 'Avatars' && <Avatars />}
-          {page === 'Logs' && <Logs />}
+          {page === 'Transaction logs' && <Logs />}
           {page === 'Withdraw coins' && <Withdraw />}
         </div>
       </div>

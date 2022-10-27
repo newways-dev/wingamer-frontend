@@ -2,7 +2,7 @@ export type AccountPageType =
   | 'Favorites'
   | 'Buy Coins'
   | 'Avatars'
-  | 'Logs'
+  | 'Transaction logs'
   | 'Withdraw coins'
 
 export interface AccountPageSliceState {

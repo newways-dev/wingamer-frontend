@@ -29,12 +29,8 @@ export const Favorites = ({ className }: FavoritesProps) => {
 
   return (
     <div className={className}>
-      <Section link={false} heading="coin">
-        {coinGames}
-      </Section>
-      <Section link={false} heading="fun">
-        {funGames}
-      </Section>
+      <Section link={false}>{coinGames}</Section>
+      <Section link={false}>{funGames}</Section>
     </div>
   )
 }

@@ -1,12 +1,32 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
-import { Account, Coins, CreatePvp, Fun, Home, NotFound, Pvp } from './pages'
+import {
+  AboutUs,
+  Account,
+  Coins,
+  ContactUs,
+  CreatePvp,
+  FAQ,
+  Fun,
+  Home,
+  NotFound,
+  PrivacyPolicy,
+  Pvp,
+  TermsOfUse,
+} from './pages'
 import { Layout } from './layout/Layout'
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <NotFound />
+            </Layout>
+          }
+        />
         <Route
           path="/"
           element={
@@ -56,10 +76,42 @@ function App() {
           }
         />
         <Route
-          path="*"
+          path="/contact-us"
           element={
             <Layout>
-              <NotFound />
+              <ContactUs />
+            </Layout>
+          }
+        />
+        <Route
+          path="/about-us"
+          element={
+            <Layout>
+              <AboutUs />
+            </Layout>
+          }
+        />
+        <Route
+          path="/faq"
+          element={
+            <Layout>
+              <FAQ />
+            </Layout>
+          }
+        />
+        <Route
+          path="/terms-of-conditions"
+          element={
+            <Layout>
+              <TermsOfUse />
+            </Layout>
+          }
+        />
+        <Route
+          path="/privacy-policy"
+          element={
+            <Layout>
+              <PrivacyPolicy />
             </Layout>
           }
         />
