@@ -1,9 +1,9 @@
 # WinGamer
 
-![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-4.8-blue?logo=typescript)
-![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-1.8-764ABC?logo=redux)
-[![Live](https://img.shields.io/badge/live-wingamer--frontend.vercel.app-success)](https://wingamer-frontend.vercel.app)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-4.8-blue?style=for-the-badge&logo=typescript)
+![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-1.8-764ABC?style=for-the-badge&logo=redux)
+[![Live](https://img.shields.io/badge/live-wingamer--frontend.vercel.app-success?style=for-the-badge)](https://wingamer-frontend.vercel.app)
 
 Frontend for WinGamer, a gaming platform with a virtual coin economy: a landing page, PvP battles, a casual "Play 4 fun" mode, and an account area for managing coins, avatars, favorites and activity logs.
 
